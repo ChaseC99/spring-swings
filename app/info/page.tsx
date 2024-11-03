@@ -10,12 +10,12 @@ export default function Info() {
     return (
         <div className={styles.infoPage}>
             <div className={styles.header}>
-                <h1>Sun&#39;s Out<br />Balls Out</h1>
+                <h1>Pumpkin Spike Latte</h1>
                 <div className={styles.datetime}>
                     <img src="/logo.png" alt="Tournament logo" className={styles.headerLogo} />
                     <div>
                         <p>9am - 4pm</p>
-                        <p>Saturday, August 24</p>
+                        <p>Sunday, November 3</p>
                     </div>
                     <img src="/logo.png" alt="Tournament logo" className={styles.headerLogo} />
                 </div>
@@ -30,54 +30,58 @@ export default function Info() {
             >
                 <LocationOnOutlinedIcon />
                 <div>
-                    <p>Kevin Moran Park</p>
-                    <p>12415 Scully Ave, Saratoga, CA 95070</p>
+                    <p>Washington Park</p>
+                    <p>840 W Washington Ave, Sunnyvale, CA 94086</p>
                 </div>
             </a>
 
             <Collapsible title="Teams" roundedTop roundedBottom>
-                <h3>🔴 Can-A-Deez</h3>
+                <h3>Team 1</h3>
                 <ul className={styles.threeColumnList}>
-                    <li>Achinthya</li>
-                    <li>Alex C</li>
-                    <li>Anne</li>
-                    <li>Ash</li>
-                    <li>Christine</li>
-                    <li>Jerry</li>
-                    <li>Julia</li>
-                </ul>
-                <br />
-                <h3>⚫️ Blockanda</h3>
-                <ul className={styles.threeColumnList}>
-                    <li>Albert</li>
-                    <li>Alex S</li>
-                    <li>Alexis</li>
+                    <li>Casey</li>
                     <li>Chase</li>
-                    <li>Colina</li>
-                    <li>Grace</li>
+                    <li>Constance</li>
+                    <li>Devin</li>
+                    <li>Jaiveer</li>
+                    <li>Jiwan</li>
+                    <li>Justine</li>
                     <li>William</li>
                 </ul>
                 <br />
-                <h3>⚪️ JaBackPain</h3>
+                <h3>Team 2</h3>
                 <ul className={styles.threeColumnList}>
-                    <li>Constance</li>
-                    <li>Edward</li>
-                    <li>Hoang</li>
-                    <li>Jackie</li>
-                    <li>Jeffrey</li>
-                    <li>Ray</li>
-                    <li>Tim</li>
-                </ul>
-                <br />
-                <h3>🔵 Naurway</h3>
-                <ul className={styles.threeColumnList}>
-                    <li>Ben</li>
-                    <li>Eugene</li>
-                    <li>Frank</li>
-                    <li>Jacob</li>
-                    <li>Justine</li>
+                    <li>Alex Chai</li>
+                    <li>Alex Sin</li>
+                    <li>Ash</li>
+                    <li>Atiq</li>
+                    <li>Isabel</li>
+                    <li>Jordan</li>
                     <li>Solaine</li>
                     <li>Soob</li>
+                </ul>
+                <br />
+                <h3>Team 3</h3>
+                <ul className={styles.threeColumnList}>
+                    <li>Allison</li>
+                    <li>Ben</li>
+                    <li>Christine</li>
+                    <li>David</li>
+                    <li>Eugene</li>
+                    <li>Grace</li>
+                    <li>Jainam</li>
+                    <li>Jeff</li>
+                </ul>
+                <br />
+                <h3>Team 4</h3>
+                <ul className={styles.threeColumnList}>
+                    <li>Achinthya</li>
+                    <li>Agneya</li>
+                    <li>Frank</li>
+                    <li>Fred</li>
+                    <li>Jackie</li>
+                    <li>Junseo</li>
+                    <li>Margot</li>
+                    <li>Ray</li>
                 </ul>
             </Collapsible>
 
@@ -87,7 +91,7 @@ export default function Info() {
                         <div>
                             <p><strong>2 Warmup Games</strong></p>
                             <ul>
-                                <li>Everyone plays in 6v6 format (there will be 1 sub at a time, rotating in every time your team rotates servers).</li>
+                                <li>Everyone plays in 6v6 format (subs will rotate in every time your team rotates servers).</li>
                                 <li>The opportunity to build chemistry and discover your position and format preferences!</li>
                                 <li>Based on the warmup results and team’s preferences, the teams will be seeded as team A, B, C, or D for the 3 competition rounds. </li>
                             </ul>
@@ -129,8 +133,18 @@ export default function Info() {
                     </ul>
                 </Collapsible>
 
+                <Collapsible title="Game Scoring">
+                    <ul>
+                        <li>Each warmup game will be just 1 set to 25 points (must win by 2, no hard cap). </li>
+                        <li>Each competition game will be 2 sets to 21 points (must win by 2, no hard cap). </li>
+                        <li>The team with most sets won at the end will be the winner of the tournament!</li>
+                        <li>There will also be some individual recognition.</li>
+                    </ul>
+                </Collapsible>
+
                 <Collapsible title="Game Rules">
                     <div>
+                        <p>No jump serves</p>
                         <p>{"There's a broad range of skill levels amongst everyone, so the recommendation is that you hold yourself to your own standards/expectations when it comes to calls for doubles, lift, net touches, etc."}</p>
                         <br />
                         <p>{"Might be a good idea to go over expectations (e.g. open hand receives) before each match, especially if you think it's going to be a competitive game."}</p>
@@ -149,15 +163,6 @@ export default function Info() {
                         <p><strong>Give up the ball == Give up the point</strong></p>
                         <p>{"Let's say you just won a point and the ball is on your side of the court. If for some reason you roll/toss/kick the ball to the other side of the court, the previous point is voided and the other team serves. (The other team does not win a point though)."}</p>
                     </div>
-                </Collapsible>
-
-                <Collapsible title="Game Scoring">
-                    <ul>
-                        <li>Each warmup game will be just 1 set to 25 points (must win by 2, no hard cap). </li>
-                        <li>Each competition game will be 2 sets to 21 points (must win by 2, no hard cap). </li>
-                        <li>The team with most sets won at the end will be the winner of the tournament!</li>
-                        <li>There will also be some individual recognition.</li>
-                    </ul>
                 </Collapsible>
 
                 <Collapsible title="Common Volleyball Rules" roundedBottom>
@@ -197,7 +202,7 @@ export default function Info() {
                     <p>Score Keeeper Tool</p>
                     <ScoreboardIcon />
                 </a>
-                <a
+                {/* <a
                     className={styles.linkContainer}
                     style={{ justifyContent: 'space-between', marginBottom: '12px'}}
                     target="_blank"
@@ -206,8 +211,8 @@ export default function Info() {
                 >
                     <p>Spotify Playlist</p>
                     <LibraryMusicOutlinedIcon />
-                </a>
-                <a
+                </a> */}
+                {/* <a
                     className={styles.linkContainer}
                     style={{ justifyContent: 'space-between', marginBottom: '12px'}}
                     target="_blank"
@@ -216,13 +221,13 @@ export default function Info() {
                 >
                     <p>Superlatives Voting</p>
                     <EmojiEventsIcon />
-                </a>
+                </a> */}
                 <a
                     className={styles.linkContainer}
                     style={{ justifyContent: 'space-between' }}
                     target="_blank"
                     rel="noopener noreferrer"
-                    href='https://docs.google.com/spreadsheets/d/1j3zgWNeTYNF9nJmJJMgLkkleyXVegc8msODOZZKAYZ8/edit?usp=sharing'
+                    href='https://docs.google.com/spreadsheets/d/1Vg6FAb7FaqgyJyjjBmjD6s6UC8SL4KwCsUYnQ0rpPk8/edit?gid=0#gid=0'
                 >
                     <p>Google Sheets Schedule</p>
                     <OpenInNewIcon />

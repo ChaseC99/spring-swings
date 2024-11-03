@@ -1,4 +1,4 @@
-# Volleybrawl
+# Pumpkin Spike Latte
 Simple website to display information for our friend group's volleyball tournament.
 | Info Page | Main Page | My Schedule Page |
 | --- | --- | --- |

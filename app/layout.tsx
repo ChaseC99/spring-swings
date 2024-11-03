@@ -6,7 +6,7 @@ import TabBar from "./tab-bar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Sun's Out Balls Out",
+  title: "Pumpkin Spike Latte",
   description: "Let's ball",
   manifest: "/manifest.json",
   icons: "/logo.png",

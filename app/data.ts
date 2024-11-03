@@ -1,17 +1,17 @@
 "use client"
 import { Game, Team, TeamWins } from "./types";
 
-const GAMES_CSV_URL = 'https://docs.google.com/spreadsheets/d/1j3zgWNeTYNF9nJmJJMgLkkleyXVegc8msODOZZKAYZ8/pub?gid=0&single=true&output=tsv';
+const GAMES_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSzvvZGyRaBCf-sVVGvmiAC_rAoxgiQ5mmWHsU616tPIVrjmILEa6nrUmQm4UZrKMGztHkWsGR0VgZ8/pub?gid=0&single=true&output=tsv';
 
-const players: string[] = [
-    "Achinthya", "Alex C", "Anne", "Ash", "Christine", "Jerry", "Julia", "Albert", "Alex S", "Alexis", "Chase", "Colina", "Grace", "William", "Constance", "Edward", "Hoang", "Jackie", "Jeffrey", "Ray", "Tim", "Ben", "Eugene", "Frank", "Jacob", "Justine", "Solaine", "Soob"
+const players: string[] = [ 
+    "Achinthya", "Agneya", "Alex Chai", "Alex Sin", "Allison", "Ash", "Atiq", "Ben", "Casey", "Chase", "Christine", "Constance", "David", "Devin", "Eugene", "Frank", "Fred", "Grace", "Isabel", "Jackie", "Jainam", "Jaiveer", "Jeff", "Jiwan", "Jordan", "Junseo", "Justine", "Margot", "Ray", "Solaine", "Soob", "William",
 ];
 
 const teams: Team[] = [
-    { name: "Can-A-Deez", color: "red" },
-    { name: "Blockanda", color: "black" },
-    { name: "JaBackPain", color: "white" },
-    { name: "Naurway", color: "blue" },
+    { name: "Blood, Sets, and Tears", color: "red" },
+    { name: "bruh, i'm so drunk", color: "black" },
+    { name: "Team 3", color: "white" },
+    { name: "Team 4", color: "blue" },
 ];
 
 async function loadTSVData(url: string, ignoreHeader: boolean = true) {
