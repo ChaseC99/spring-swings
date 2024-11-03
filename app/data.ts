@@ -9,9 +9,9 @@ const players: string[] = [
 
 const teams: Team[] = [
     { name: "Blood, Sets, and Tears", color: "red" },
-    { name: "bruh, i'm so drunk", color: "black" },
+    { name: "Team 2", color: "blue" },
     { name: "Team 3", color: "white" },
-    { name: "Team 4", color: "blue" },
+    { name: "bruh, i'm so drunk", color: "black" },
 ];
 
 async function loadTSVData(url: string, ignoreHeader: boolean = true) {

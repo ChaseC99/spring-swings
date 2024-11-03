@@ -2,8 +2,7 @@
 import React from 'react';
 import styles from './scoreboard.module.css';
 import { TeamWins } from '../types';
-import { Skeleton } from '@mui/material';
-import Podium from './podium';
+import Latte from './latte';
 
 type ScoreboardProps = {
     teamWins: TeamWins[];
@@ -17,7 +16,7 @@ export default function Scoreboard({ teamWins, loading }: ScoreboardProps) {
     return (
         <div className={styles.scoreboardContainer}>
             {teamWins.map((teamWins, i) => (
-                <Podium key={i} teamWins={teamWins} heighMultiplier={teamWinsArray.indexOf(teamWins.wins)+1}/>
+                <Latte key={i} teamWins={teamWins} heightMultiplier={teamWinsArray.indexOf(teamWins.wins)+1}/>
             ))}
         </div>
     );
