@@ -20,8 +20,8 @@ export default function Latte({ teamWins, heightMultiplier }: PodiumProps) {
                 />
                 <div className={styles.cupLid} />
                 <div className={styles.cupBody} style={{ height: 50 * heightMultiplier }}>
-                    <div className={styles.teamName}>
-                        {name}
+                    <div className={styles.teamName} >
+                        {name === "OVERcooked" ? "OVER cooked" : name}
                     </div>
                     <div className={styles.cupSleeve}>
                         <span>
