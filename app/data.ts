@@ -9,8 +9,8 @@ const players: string[] = [
 
 const teams: Team[] = [
     { name: "Blood, Sets, and Tears", color: "red" },
-    { name: "Team 2", color: "blue" },
-    { name: "Team 3", color: "white" },
+    { name: "Gobble on Deez Nets", color: "blue" },
+    { name: "OVERcooked", color: "white" },
     { name: "bruh, i'm so drunk", color: "black" },
 ];
 
