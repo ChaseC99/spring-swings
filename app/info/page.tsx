@@ -24,14 +24,16 @@ export default function Info() {
 
             <a
                 className={styles.linkContainer}
+                style={{ justifyContent: "left", gap: "24px" }}
                 target="_blank"
                 rel="noopener noreferrer"
                 href='https://www.google.com/maps/search/?api=1&query=Kevin%20Moran%20Park'
             >
                 <LocationOnOutlinedIcon />
-                <div>
+                <div style={{width: "100%"}}>
                     <p>Washington Park</p>
-                    <p>840 W Washington Ave, Sunnyvale, CA 94086</p>
+                    <p>840 W Washington Ave</p>
+                    <p>Sunnyvale, CA 94086</p>
                 </div>
             </a>
 

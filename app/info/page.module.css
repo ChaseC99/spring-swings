@@ -64,7 +64,7 @@
 }
 
 .threeColumnList {
-    columns: 4;
+    columns: 3;
     column-gap: 20px;
     list-style: none;
     padding: 10px 0;

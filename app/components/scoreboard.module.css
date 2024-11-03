@@ -1,6 +1,6 @@
 .scoreboardContainer {
   display: flex;
-  align-items: end;
+  align-items: start;
   justify-content: space-evenly;
   width: 100vw;
   padding: 20px;

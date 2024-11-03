@@ -9,7 +9,7 @@ type PodiumProps = {
     heighMultiplier: number;
 };
 
-export default function Scoreboard({ teamWins, heighMultiplier }: PodiumProps) {
+export default function Podium({ teamWins, heighMultiplier }: PodiumProps) {
     const { name, color, wins } = teamWins;
     return (
         <div>
