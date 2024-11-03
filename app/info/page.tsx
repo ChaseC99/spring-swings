@@ -74,7 +74,7 @@ export default function Info() {
                     <li>Jeff</li>
                 </ul>
                 <br />
-                <h3>bruh, i'm so drunk</h3>
+                <h3>bruh, i&apos;m so drunk</h3>
                 <ul className={styles.threeColumnList}>
                     <li>Achinthya</li>
                     <li>Agneya</li>
