@@ -50,7 +50,7 @@ export default function Info() {
                     <li>William</li>
                 </ul>
                 <br />
-                <h3>Gobble on Deez Nets/h3>
+                <h3>Gobble on Deez Nets</h3>
                 <ul className={styles.threeColumnList}>
                     <li>Alex Chai</li>
                     <li>Alex Sin</li>
