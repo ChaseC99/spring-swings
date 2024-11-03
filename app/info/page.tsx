@@ -38,7 +38,7 @@ export default function Info() {
             </a>
 
             <Collapsible title="Teams" roundedTop roundedBottom>
-                <h3>Team 1</h3>
+                <h3>Blood, Sets, and Tears</h3>
                 <ul className={styles.threeColumnList}>
                     <li>Casey</li>
                     <li>Chase</li>
@@ -50,7 +50,7 @@ export default function Info() {
                     <li>William</li>
                 </ul>
                 <br />
-                <h3>Team 2</h3>
+                <h3>Gobble on Deez Nets/h3>
                 <ul className={styles.threeColumnList}>
                     <li>Alex Chai</li>
                     <li>Alex Sin</li>
@@ -62,7 +62,7 @@ export default function Info() {
                     <li>Soob</li>
                 </ul>
                 <br />
-                <h3>Team 3</h3>
+                <h3>OVERcooked</h3>
                 <ul className={styles.threeColumnList}>
                     <li>Allison</li>
                     <li>Ben</li>
@@ -74,7 +74,7 @@ export default function Info() {
                     <li>Jeff</li>
                 </ul>
                 <br />
-                <h3>Team 4</h3>
+                <h3>bruh, i'm so drunk</h3>
                 <ul className={styles.threeColumnList}>
                     <li>Achinthya</li>
                     <li>Agneya</li>
