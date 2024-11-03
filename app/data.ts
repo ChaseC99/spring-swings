@@ -46,9 +46,9 @@ function mapGamesTSVToGames(csvData: string[]): Game[] {
 
             const gameId = parseInt(id);
             const courtNumber = parseInt(court);
-            const team1Players = t1_players.split(",");
-            const team2Players = t2_players.split(",")
-            const refs = referees.split(",").filter((ref: string) => ref.trim() !== "");
+            const team1Players = t1_players.split(",").map((player) => player.trim());
+            const team2Players = t2_players.split(",").map((player) => player.trim());
+            const refs = referees.split(",").map((ref) => ref.trim()).filter((ref: string) => ref.trim() !== "");
 
             const gameSet = {
                 team1Score: getSetScore(t1_score),
@@ -87,7 +87,10 @@ export async function getGames() {
 
 export async function getGamesFor(player: string) {
     const { rows: csvData, lastUpdated } = await loadTSVData(GAMES_CSV_URL);
-    const games = mapGamesTSVToGames(csvData).filter(game => game.team1Players.includes(player) || game.team2Players.includes(player) || game.refs.includes(player));
+    let games = mapGamesTSVToGames(csvData)
+    console.log(games);
+    games = games.filter(game => game.team1Players.includes(player) || game.team2Players.includes(player) || game.refs.includes(player));
+    console.log(games);
     return { games, lastUpdated };
 }
 
@@ -103,7 +106,9 @@ export function getTeamWins(games: Game[]): TeamWins[] {
         for (const set of game.sets) {
             if (set.team1Score !== 0 || set.team2Score !== 0) {
                 const winningTeam = set.team1Score > set.team2Score ? team1Name : team2Name;
-                teamWins[winningTeam].wins += 1;
+                if (teamWins[winningTeam]) {
+                    teamWins[winningTeam].wins += 1;
+                }
             }
         }
     }
