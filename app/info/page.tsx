@@ -44,7 +44,7 @@ export default function Info() {
 
             <Collapsible title="Teams" roundedTop roundedBottom>
                 <p>
-                    Yes, in this tournament, your 'team' will be just you and your partner! But the games will be in a 4v4 format.
+                    {"Yes, in this tournament, your 'team' will be just you and your partner! But the games will be in a 4v4 format."}
                 </p>
                 <br />
                 {loading ? (
@@ -84,7 +84,7 @@ export default function Info() {
                         <div>
                             <p><strong>Meet as many different teams as possible.</strong></p>
                             <ul>
-                                <li>This will be more of a 'mixer' event.</li>
+                                <li>{"This will be more of a 'mixer' event."}</li>
                                 <li>The goal is that you will play with and against as many teams as possible throughout the day. </li>
                             </ul>
                         </div>
