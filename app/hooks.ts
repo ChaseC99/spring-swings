@@ -31,7 +31,29 @@ export function useTeams() {
     return { teams: data, error, loading };
 }
 
+
 export function useGames() {
-    const { data, error, loading } = useSupabaseData('Games');
-    return { games: data, error, loading };
+    const [games, setGames] = useState<any[]>([]);
+    const [loading, setLoading] = useState<boolean>(true);
+    const [error, setError] = useState<any>(null);
+
+    useEffect(() => {
+        const fetchGames = async () => {
+            setLoading(true);
+            const { data, error } = await supabase.rpc('get_all_games_with_players_and_round_info');
+            
+            if (error) {
+                console.error('Error fetching games:', error);
+                setError(error);
+                setGames([]);
+            } else {
+                setGames(data);
+            }
+            setLoading(false);
+        };
+
+        fetchGames();
+    }, []);
+
+    return { games, loading, error };
 }
