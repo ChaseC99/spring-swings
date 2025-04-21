@@ -6,7 +6,7 @@ import TabBar from "./tab-bar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Pumpkin Spike Latte",
+  title: "Spring Swings",
   description: "Let's ball",
   manifest: "/manifest.json",
   icons: "/logo.png",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: '#dfdcc9',
+  themeColor: '#BDD49C',
 }
 
 export default function RootLayout({

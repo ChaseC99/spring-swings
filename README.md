@@ -1,4 +1,4 @@
-# Pumpkin Spike Latte
+# Spring Swings
 Simple website to display information for our friend group's volleyball tournament.
 | Info Page | Main Page | My Schedule Page |
 | --- | --- | --- |

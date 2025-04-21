@@ -22,9 +22,9 @@ export default function TabBar() {
                 onChange={handleChange}
                 sx={{
                     height: 70,
-                    bgcolor: "#8d6f5a",
+                    bgcolor: "#5cbf66",
                     "& .Mui-selected, .Mui-selected > svg": {
-                        color: "#ee8e38"
+                        color: "#fff"
                         
                       }
                  }}
