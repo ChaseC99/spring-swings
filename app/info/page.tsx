@@ -1,3 +1,4 @@
+"use client";
 import styles from './page.module.css';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
@@ -5,17 +6,21 @@ import LibraryMusicOutlinedIcon from '@mui/icons-material/LibraryMusicOutlined';
 import ScoreboardIcon from '@mui/icons-material/Scoreboard';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import Collapsible from '../components/collapsible';
+import { useTeams } from '../hooks';
 
 export default function Info() {
+    const {teams, error, loading} = useTeams();
+    console.log(teams);
+
     return (
         <div className={styles.infoPage}>
             <div className={styles.header}>
-                <h1>Pumpkin Spike Latte</h1>
+                <h1>Spring Swings</h1>
                 <div className={styles.datetime}>
                     <img src="/logo.png" alt="Tournament logo" className={styles.headerLogo} />
                     <div>
                         <p>9am - 4pm</p>
-                        <p>Sunday, November 3</p>
+                        <p>Sunday, April 27</p>
                     </div>
                     <img src="/logo.png" alt="Tournament logo" className={styles.headerLogo} />
                 </div>
@@ -27,7 +32,7 @@ export default function Info() {
                 style={{ justifyContent: "left", gap: "24px" }}
                 target="_blank"
                 rel="noopener noreferrer"
-                href='https://www.google.com/maps/search/?api=1&query=Kevin%20Moran%20Park'
+                href='https://www.google.com/maps/search/?api=1&query=Washington%2Park%2C+Sunnyvale%2C+CA+94086'
             >
                 <LocationOnOutlinedIcon />
                 <div style={{width: "100%"}}>
@@ -38,109 +43,64 @@ export default function Info() {
             </a>
 
             <Collapsible title="Teams" roundedTop roundedBottom>
-                <h3>Blood, Sets, and Tears</h3>
-                <ul className={styles.threeColumnList}>
-                    <li>Casey</li>
-                    <li>Chase</li>
-                    <li>Constance</li>
-                    <li>Devin</li>
-                    <li>Jaiveer</li>
-                    <li>Jiwan</li>
-                    <li>Justine</li>
-                    <li>William</li>
-                </ul>
+                <p>
+                    Yes, in this tournament, your 'team' will be just you and your partner! But the games will be in a 4v4 format.
+                </p>
                 <br />
-                <h3>Gobble on Deez Nets</h3>
-                <ul className={styles.threeColumnList}>
-                    <li>Alex Chai</li>
-                    <li>Alex Sin</li>
-                    <li>Ash</li>
-                    <li>Atiq</li>
-                    <li>Isabel</li>
-                    <li>Jordan</li>
-                    <li>Solaine</li>
-                    <li>Soob</li>
-                </ul>
-                <br />
-                <h3>OVERcooked</h3>
-                <ul className={styles.threeColumnList}>
-                    <li>Allison</li>
-                    <li>Ben</li>
-                    <li>Christine</li>
-                    <li>David</li>
-                    <li>Eugene</li>
-                    <li>Grace</li>
-                    <li>Jainam</li>
-                    <li>Jeff</li>
-                </ul>
-                <br />
-                <h3>bruh, i&apos;m so drunk</h3>
-                <ul className={styles.threeColumnList}>
-                    <li>Achinthya</li>
-                    <li>Agneya</li>
-                    <li>Frank</li>
-                    <li>Fred</li>
-                    <li>Jackie</li>
-                    <li>Junseo</li>
-                    <li>Margot</li>
-                    <li>Ray</li>
-                </ul>
+                {loading ? (
+                    <div className={styles.loadingContainer}>
+                        <p>Loading...</p>
+                    </div>
+                ) : teams ? (
+                    <table className={styles.teamsTable}>
+                        <tbody>
+                            {teams.map((team, index) => (
+                                <tr key={index}>
+                                    <td>• {team.player1}</td>
+                                    <td>{team.player2}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                ) : (
+                    <div className={styles.loadingContainer}>
+                        <p>Error loading teams</p>
+                    </div>
+                )}
             </Collapsible>
 
             <div className={styles.infoBody}>
                 <Collapsible title="Gameplay" roundedTop>
                     <div>
                         <div>
-                            <p><strong>2 Warmup Games</strong></p>
+                            <p><strong>Exclusively 4v4 games</strong></p>
                             <ul>
-                                <li>Everyone plays in 6v6 format (subs will rotate in every time your team rotates servers).</li>
-                                <li>The opportunity to build chemistry and discover your position and format preferences!</li>
-                                <li>Based on the warmup results and team’s preferences, the teams will be seeded as team A, B, C, or D for the 3 competition rounds. </li>
+                                <li>
+                                    In each game, you and your partner will be put on a team with another pair. And you will play against two other pairs of partners. 
+                                </li>
                             </ul>
                         </div>
                         <br />
                         <div>
-                            <p><strong>15m Break: Team Lineups Selection</strong></p>
+                            <p><strong>Meet as many different teams as possible.</strong></p>
                             <ul>
-                                <li>This will be when each team will choose who will play in each game. </li>
-                                <li>The Home team in each round will choose first, and the Away team will get to respond accordingly. </li>
-                                <li>No gender requirements in any of the games. </li>
+                                <li>This will be more of a 'mixer' event.</li>
+                                <li>The goal is that you will play with and against as many teams as possible throughout the day. </li>
                             </ul>
                         </div>
-                        <br />
-                        <div>
-                            <p><strong>3 Competition Rounds</strong></p>
-                            <ul>
-                                <li>Each round consists of 2 separate games. </li>
-                                <li>Each player will play in exactly 1 game (2 sets) per competition round. </li>
-                                <li>By the end of the day, everyone will play 2 warmups and 3 competition games. </li>
-                            </ul>
-                    </div>
                     </div>
                 </Collapsible>
 
                 <Collapsible title="Court Setup">
-                    <ul>
-                        <li>4v4 and 5v5: full court size</li>
-                        <li>{"3v3 and 2v2: small 'doubles' court size"}</li>
-                    </ul>
-                </Collapsible>
-
-                <Collapsible title="Net Height">
-                    <p>Simple (not enforced, but strongly encouraged)</p>
-                    <ul>
-                        <li>Coed Game == Coed Height</li>
-                        <li>{"Men's Game == Men's Height"}</li>
-                        <li>{"Women's Game == Women's Height"}</li>
-                    </ul>
+                    <p>
+                        Full sized court, co-ed height
+                    </p>
                 </Collapsible>
 
                 <Collapsible title="Game Scoring">
                     <ul>
-                        <li>Each warmup game will be just 1 set to 25 points (must win by 2, no hard cap). </li>
-                        <li>Each competition game will be 2 sets to 21 points (must win by 2, no hard cap). </li>
-                        <li>The team with most sets won at the end will be the winner of the tournament!</li>
-                        <li>There will also be some individual recognition.</li>
+                        <li>Each game will be just 1 set to 25 points (must win by 2, no hard cap).</li>
+                        <li>The pair with the most games won at the end will be the winner of the tournament!</li>
                     </ul>
                 </Collapsible>
 
