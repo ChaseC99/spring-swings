@@ -184,7 +184,7 @@ export default function Info() {
                     <p>Superlatives Voting</p>
                     <EmojiEventsIcon />
                 </a> */}
-                <a
+                {/* <a
                     className={styles.linkContainer}
                     style={{ justifyContent: 'space-between' }}
                     target="_blank"
@@ -193,7 +193,7 @@ export default function Info() {
                 >
                     <p>Google Sheets Schedule</p>
                     <OpenInNewIcon />
-                </a>
+                </a> */}
             </div>
         </div>
     );
