@@ -4,7 +4,7 @@ import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import SportsVolleyballIcon from '@mui/icons-material/SportsVolleyball';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import { usePathname, useRouter } from 'next/navigation';
 
 export default function TabBar() {
@@ -40,9 +40,9 @@ export default function TabBar() {
                     icon={<SportsVolleyballIcon />}
                 />
                 <BottomNavigationAction
-                    label="Me"
-                    value="/me"
-                    icon={<AccountCircleIcon />}
+                    label="Standings"
+                    value="/standings"
+                    icon={<EmojiEventsIcon />}
                 />
             </BottomNavigation>
         </div>
