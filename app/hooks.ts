@@ -33,6 +33,10 @@ export function useTeams() {
     return { teams: data, error, loading };
 }
 
+export function usePlayers() {
+    // TODO: Implement usePlayers hook
+    return { players: [], error: null, loading: false };
+}
 
 export function useGames() {
     const [games, setGames] = useState<Game[]>(

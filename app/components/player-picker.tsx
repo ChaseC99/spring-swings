@@ -1,5 +1,5 @@
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
-import { getPlayers } from "../data";
+import { usePlayers } from "../hooks";
 
 type PlayerPickerProps = {
     value: string;
@@ -7,7 +7,7 @@ type PlayerPickerProps = {
 };
 
 export default function PlayerPicker({ value, onChange }: PlayerPickerProps) {
-    const players = getPlayers();
+    const {players} = usePlayers();
 
     const handleChange = (event: { target: { value: any; }; }) => {
         onChange(event.target.value);
