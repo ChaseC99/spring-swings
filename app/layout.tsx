@@ -15,6 +15,30 @@ export const metadata: Metadata = {
     statusBarStyle: "black-translucent",
     startupImage: "apple-icon.png",
   },
+  openGraph: {
+    title: "Spring Swings",
+    siteName: "Spring Swings",
+    description: "Saturday, April 27 | 9am - 4pm | Washington Park",
+    images: [
+      {
+        url: "https://swings.chase.link/logo.png",
+        width: 800,
+        height: 800,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "Spring Swings",
+    description: "Saturday, April 27 | 9am - 4pm | Washington Park",
+    images: [
+      {
+        url: "https://swings.chase.link/logo.png",
+        width: 800,
+        height: 800,
+      },
+    ],
+  },
 };
 
 export const viewport: Viewport = {
