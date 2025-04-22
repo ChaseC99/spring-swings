@@ -5,11 +5,10 @@ import GameListLoading from "./games-list-loading";
 
 type ScheduleProps = {
     games: Game[];
-    lastUpdated: string;
     loading: boolean;
 };
 
-export default function Schedule({ games, lastUpdated, loading }: ScheduleProps) {
+export default function Schedule({ games, loading }: ScheduleProps) {
     if (loading) {
         return (
             <div style={{ padding: "0 8px" }}>
@@ -21,13 +20,6 @@ export default function Schedule({ games, lastUpdated, loading }: ScheduleProps)
     return (
         <div style={{ padding: "0 8px" }}>
             <GamesList games={games} />
-            {
-                lastUpdated && (
-                    <div style={{ color: "#444", textAlign: "center", margin: 24, paddingBottom: 24 }}>
-                        Last updated: {lastUpdated}
-                    </div>
-                )
-            }
         </div>
     );
 }
