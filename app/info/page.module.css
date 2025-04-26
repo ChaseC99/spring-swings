@@ -69,18 +69,3 @@
     list-style: none;
     padding: 10px 0;
 }
-
-.teamsTable {
-    border: none;
-    border-collapse: collapse;
-    width: 100%;
-    max-width: 500px;
-}
-
-.teamsTable tr {
-    border-bottom: 1px solid #ccc;
-}
-
-.teamsTable td {
-    border: none;
-}

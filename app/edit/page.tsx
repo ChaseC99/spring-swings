@@ -53,7 +53,7 @@ export default function Home() {
             <div style={{ textAlign: "center", margin: "16px 8px 24px 8px" }}>
                 <h1>Edit Scores</h1>
                 <p>Click on a game to update the score.</p>
-                <p>Please don't share this link.</p>
+                <p>{"Please don't share this link."}</p>
                 <p>There is no password required to edit scores.</p>
             </div>
             <Schedule games={games} loading={games.length == 0} onGameClick={onGameClick}/>

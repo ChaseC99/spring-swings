@@ -1,17 +1,10 @@
-"use client";
 import styles from './page.module.css';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
-import OpenInNewIcon from '@mui/icons-material/OpenInNew';
-import LibraryMusicOutlinedIcon from '@mui/icons-material/LibraryMusicOutlined';
 import ScoreboardIcon from '@mui/icons-material/Scoreboard';
-import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import Collapsible from '../components/collapsible';
-import { useTeams } from '../supabaseFunctions';
+import Teams from '../components/teams';
 
 export default function Info() {
-    const {teams, error, loading} = useTeams();
-    console.log(teams);
-
     return (
         <div className={styles.infoPage}>
             <div className={styles.header}>
@@ -43,30 +36,7 @@ export default function Info() {
             </a>
 
             <Collapsible title="Teams" roundedTop roundedBottom>
-                <p>
-                    {"Yes, in this tournament, your 'team' will be just you and your partner! But the games will be in a 4v4 format."}
-                </p>
-                <br />
-                {loading ? (
-                    <div className={styles.loadingContainer}>
-                        <p>Loading...</p>
-                    </div>
-                ) : teams ? (
-                    <table className={styles.teamsTable}>
-                        <tbody>
-                            {teams.map((team, index) => (
-                                <tr key={index}>
-                                    <td>• {team.player1}</td>
-                                    <td>{team.player2}</td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
-                ) : (
-                    <div className={styles.loadingContainer}>
-                        <p>Error loading teams</p>
-                    </div>
-                )}
+                <Teams />
             </Collapsible>
 
             <div className={styles.infoBody}>
