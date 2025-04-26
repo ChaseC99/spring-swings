@@ -1,5 +1,4 @@
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
-import { usePlayers } from "../hooks";
 
 type PlayerPickerProps = {
     value: string;

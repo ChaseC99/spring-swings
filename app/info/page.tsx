@@ -6,7 +6,7 @@ import LibraryMusicOutlinedIcon from '@mui/icons-material/LibraryMusicOutlined';
 import ScoreboardIcon from '@mui/icons-material/Scoreboard';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import Collapsible from '../components/collapsible';
-import { useTeams } from '../hooks';
+import { useTeams } from '../supabaseFunctions';
 
 export default function Info() {
     const {teams, error, loading} = useTeams();

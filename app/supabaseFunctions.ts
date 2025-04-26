@@ -60,11 +60,6 @@ export function useTeams() {
     return { teams: data, error, loading };
 }
 
-export function usePlayers() {
-    // TODO: Implement usePlayers hook
-    return { players: [], error: null, loading: false };
-}
-
 export function useTeamStandings() {
     return useSupabaseFunction<TeamStanding[]>('get_team_standings');
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import { useTeamStandings } from "../hooks";
+import { useTeamStandings } from "../supabaseFunctions";
 
 export default function Standings() {
     const { data: standings } = useTeamStandings();

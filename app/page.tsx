@@ -2,7 +2,7 @@
 import { use, useEffect, useState } from "react";
 import PlayerPicker from "./components/player-picker";
 import Schedule from "./components/schedule";
-import { useGames } from "./hooks";
+import { useGames } from "./supabaseFunctions";
 
 export default function Home() {
   const {data: games} = useGames();
