@@ -146,8 +146,8 @@ export type Database = {
           game_id: number
           round: number
           court: number
-          team_ab_score: number | null
-          team_cd_score: number | null
+          team_ab_score: number
+          team_cd_score: number
           start_time: string
           notes: string
           team_a_player1: string
@@ -158,6 +158,18 @@ export type Database = {
           team_c_player2: string
           team_d_player1: string
           team_d_player2: string
+        }[]
+      }
+      get_team_standings: {
+        Args: Record<PropertyKey, never>
+        Returns: {
+          team_id: number
+          player1: string
+          player2: string
+          number_of_wins: number
+          total_points_scored: number
+          total_points_against: number
+          point_difference: number
         }[]
       }
     }
