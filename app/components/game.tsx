@@ -18,14 +18,31 @@ export default function Game({
     team_d_player1,
     team_d_player2,
 }: GameProps) {
-    // Filter out sets that are not yet played
-    // sets = sets.filter(({ team1Score, team2Score }) => team1Score !== 0 || team2Score !== 0);
+    // Format the start time from 'HH:MM:SS' to 'HH:MM AM/PM'
+    const formatTime = (time: string) => {
+        const [hours, minutes] = time.split(':');
+        const ampm = +hours >= 12 ? 'PM' : 'AM';
+        const formattedHours = +hours % 12 || 12; // Convert to 12-hour format
+        return `${formattedHours}:${minutes} ${ampm}`;
+    };
+
     return (
         <div className={styles.game}>
             <div className={styles.gameHeader}>
                 <span style={{textAlign: "start"}}>Court {court}</span>
-                <span style={{textAlign: "end"}}>{start_time?.toLowerCase()}</span>
+                <span style={{textAlign: "end"}}>{formatTime(start_time?.toLowerCase())}</span>
             </div>
+
+            {
+                (team_ab_score > 0 || team_cd_score > 0) && (
+                    <div className={styles.scores}>
+                        <div>{team_ab_score}</div>
+                        -
+                        <div>{team_cd_score}</div>
+                    </div>
+                )
+            }
+            
 
             <div className={styles.playersContainer}>
                 <div className={styles.players}>
@@ -39,12 +56,6 @@ export default function Game({
                     <br />
                     {[team_d_player1, team_d_player2].join(", ")}
                 </div>
-            </div>
-
-            <div className={styles.scores}>
-                <div>{team_ab_score}</div>
-                -
-                <div>{team_cd_score}</div>
             </div>
         </div>
     );
