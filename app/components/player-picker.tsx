@@ -3,12 +3,11 @@ import { usePlayers } from "../hooks";
 
 type PlayerPickerProps = {
     value: string;
+    options: string[];
     onChange: (player: string) => void;
 };
 
-export default function PlayerPicker({ value, onChange }: PlayerPickerProps) {
-    const {players} = usePlayers();
-
+export default function PlayerPicker({ value, options, onChange }: PlayerPickerProps) {
     const handleChange = (event: { target: { value: any; }; }) => {
         onChange(event.target.value);
     }
@@ -21,6 +20,9 @@ export default function PlayerPicker({ value, onChange }: PlayerPickerProps) {
                         shrink={false}
                         sx={{
                             color: "#8d6f5a",
+                            '&.Mui-focused': {
+                                color: "#8d6f5a",
+                            },
                         }}>
                         Pick a player
                     </InputLabel>
@@ -29,7 +31,6 @@ export default function PlayerPicker({ value, onChange }: PlayerPickerProps) {
             <Select
                 onChange={handleChange}
                 value={value}
-                fullWidth
                 sx={{
                     color: "black",
                     '.MuiOutlinedInput-notchedOutline': {
@@ -46,7 +47,7 @@ export default function PlayerPicker({ value, onChange }: PlayerPickerProps) {
                     }
                 }}
             >
-                {players.map(p => (
+                {options.map(p => (
                     <MenuItem
                         key={p}
                         value={p}
