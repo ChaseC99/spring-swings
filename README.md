@@ -1,9 +1,8 @@
 # Spring Swings
 Simple website to display information for our friend group's volleyball tournament.
-| Info Page | Main Page | My Schedule Page |
+| Info Page | Schedule Page | Standings Page |
 | --- | --- | --- |
-| <img width="370" alt="image" src="https://github.com/ChaseC99/volleybrawl/assets/29494270/7ee76381-be3c-426f-b34e-f66e40156b02"> | <img width="369" alt="image" src="https://github.com/ChaseC99/volleybrawl/assets/29494270/3a27ec00-e8e4-453e-a8d0-f92345bd26f4"> | <img width="371" alt="image" src="https://github.com/ChaseC99/volleybrawl/assets/29494270/0a6ffefd-f2f2-40a2-aee1-3381460a2320"> | 
-
+| <img width="390" alt="image" src="https://github.com/user-attachments/assets/963dbefd-7ac6-4856-862b-a88fb185b74b" /> | <img width="391" alt="image" src="https://github.com/user-attachments/assets/cfee7a82-f826-4608-a6fc-ccc3253509d9" /> | <img width="390" alt="image" src="https://github.com/user-attachments/assets/c9d968e4-e478-44c1-98de-5855fbc0c507" /> | 
 
 ## Local Development
 1. Clone the repository
